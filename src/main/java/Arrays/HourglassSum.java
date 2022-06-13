@@ -1,4 +1,4 @@
-package HourglassSum;
+package Arrays;
 
 import java.io.*;
 import java.util.*;

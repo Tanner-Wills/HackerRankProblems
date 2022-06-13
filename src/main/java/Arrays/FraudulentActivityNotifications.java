@@ -1,4 +1,4 @@
-package FraudulentActivityNotifications;
+package Arrays;
 
 import java.util.*;
 

@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 public class MergeTwoSortedLists {
 
-    public class ListNode {
+    public static  class ListNode {
       int val;
       ListNode next;
       ListNode() {}
@@ -15,7 +15,7 @@ public class MergeTwoSortedLists {
       ListNode(int val, ListNode next) { this.val = val; this.next = next; }
   }
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         ListNode list1 = new ListNode(1);
         ListNode list11 = new ListNode(2);
         ListNode list111 = new ListNode(4);
@@ -30,12 +30,15 @@ public class MergeTwoSortedLists {
 
         ListNode solution = mergeTwoLists(list1,list2);
 
+        while(solution != null) {
+            System.out.println(solution.val + ", ");
+            solution = solution.next;
+        }
+
         System.out.println(solution);
     }
 
-
-
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         // recursive solution
         // 1. check if the current node of either list is null
         // 2. if only one node is null, add the other node to the list.

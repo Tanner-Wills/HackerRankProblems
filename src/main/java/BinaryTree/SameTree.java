@@ -1,7 +1,4 @@
-package DepthFirstSearch;
-
-import java.util.ArrayList;
-import java.util.List;
+package BinaryTree;
 
 public class SameTree {
     public static class TreeNode {

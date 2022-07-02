@@ -1,4 +1,4 @@
-package DepthFirstSearch;
+package BinaryTree;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -48,9 +48,31 @@ public class ReverseArrayQueries {
                 pointer ++;
             }
         }
+
         return result;
     }
 }
+
+/*
+Alternative Java:
+
+For (List<Integer> operation : operations) {
+    Integer frontPointer = operation.get(0);
+    Integer backPointer = operation.get(1);
+    while (frontPointer < backPointer) {
+    Integer frontValue = arr.get(frontPointer);
+    Integer backValue = arr.get(backPointer);
+    arr.set(frontPointer, backValue);
+    arr.set(backPointer, frontValue);
+    frontPoiner ++;
+    backPointer --;
+    }
+    }
+    return arr;
+    }
+
+
+ */
 
 /*
 Python

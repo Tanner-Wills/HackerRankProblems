@@ -51,3 +51,13 @@ public class ReverseArrayQueries {
         return result;
     }
 }
+
+/*
+Python
+for operation in operations:
+    i,j = operation
+    sub_array = arr[i:j+1]
+    sub_array.reverse()
+    arr[i:j+1] = sub_array
+return arr
+ */

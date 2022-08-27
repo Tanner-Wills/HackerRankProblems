@@ -46,6 +46,8 @@ public class SortTheSummary {
         HashMap<Integer,Integer> map = new HashMap<>();
         for (Integer integer : arr) {
             map.merge(integer,1,Integer::sum);
+//            int count = map.getOrDefault(integer,0);
+//            map.put(integer,count ++);
         }
 
         // add all pairs to list

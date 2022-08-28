@@ -1,6 +1,4 @@
-package Arrays;
-
-import java.util.Arrays;
+package ArraysProblems;
 
 public class MinimumSwaps {
     // Complete the minimumSwaps function below.

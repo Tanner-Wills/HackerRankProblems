@@ -1,10 +1,8 @@
-package Arrays;
+package ArraysProblems;
 
-import java.io.*;
 import java.util.*;
-import java.util.stream.*;
+
 import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
 
 class HourglassSum {
 

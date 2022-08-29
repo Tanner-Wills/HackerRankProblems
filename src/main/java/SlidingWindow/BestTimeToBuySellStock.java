@@ -14,17 +14,19 @@ Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-
 Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
      */
     public int maxProfit(int[] prices) {
+
         int buy = -1;
         int sell = -1;
         int money = 0;
         int profit = 0;
         for (int i = 0; i < prices.length; i++) {
             int price = prices[i];
-            // update buy point
+            // update buy point, reset sell point
             if (buy == -1 || price < buy) {
                 buy = price;
                 sell = -1;
             }
+            // if sell is updated, check new profit
             else if (price >= sell) {
                 sell = price;
                 profit = sell - buy;

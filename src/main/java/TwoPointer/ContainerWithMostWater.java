@@ -40,7 +40,4 @@ In this case, the max area of water (blue section) the container can contain is 
         }
         return maximumArea;
     }
-
-
-
 }

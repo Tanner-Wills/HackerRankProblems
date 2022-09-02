@@ -32,10 +32,10 @@ public class NewYearChaos {
 
         for (int i = 0; i < q.size(); i++) {
             int personNumber = q.get(i);
-            System.out.println("first: " + first);
-            System.out.println("second: " + second);
-            System.out.println("third: " + third);
-            System.out.println("");
+//            System.out.println("first: " + first);
+//            System.out.println("second: " + second);
+//            System.out.println("third: " + third);
+//            System.out.println("");
 
             if (personNumber == first) {
                 first = second;

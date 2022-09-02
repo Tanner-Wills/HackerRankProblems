@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class twoSumBST {
+    /*
     public static class TreeNode {
         int val;
         BinaryTreeInorderTraversal.TreeNode left;
@@ -60,4 +61,6 @@ public class twoSumBST {
             inorderRecursion(root.right, solution);
         }
     }
+
+     */
 }

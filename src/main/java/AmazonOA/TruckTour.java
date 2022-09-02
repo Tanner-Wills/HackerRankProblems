@@ -5,22 +5,19 @@ import java.util.List;
 public class TruckTour {
     public static int truckTour(List<List<Integer>> petrolpumps) {
         // Write your code here
-        int petrolLeft=0;
-        int pet=0, dis=0;
-        int index=0;
+        int gas = 0;
+        int distance = 0;
+        int index = 0;
         for(int i=0; i < petrolpumps.size(); i++) {
-            pet = petrolpumps.get(i).get(0);
-            dis = petrolpumps.get(i).get(1);
-            petrolLeft += pet;
-            if(petrolLeft < dis)
-            {
+            gas += petrolpumps.get(i).get(0);
+            distance = petrolpumps.get(i).get(1);
+            if(gas < distance) {
                 // reset index to next point.
                 index = i+1;
-                petrolLeft =0;
+                gas =0;
             }
             else {
-                petrolLeft -= dis;
-
+                gas -= distance;
             }
         }
         return index;

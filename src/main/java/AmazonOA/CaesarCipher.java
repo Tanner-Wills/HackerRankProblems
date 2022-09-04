@@ -1,14 +1,16 @@
 package AmazonOA;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class CaesarCipher {
     public static String caesarCipher(String s, int k) {
+
         // Write your code here
         //define alphabet
         char[] alphabet = new char[] {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-
+        
         //map of characters to their indices
         Map<Character, Integer> characterIndices = new HashMap<>();
         for(int i = 0; i < 26; i++) {

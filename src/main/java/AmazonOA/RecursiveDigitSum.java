@@ -22,4 +22,30 @@ public class RecursiveDigitSum {
         }
         return Integer.parseInt(n);
     }
+
+    /*
+    public static int superDigit(String n, int k) {
+    // Write your code here
+        Integer superD = compute(n) * k;
+        n = superD.toString();
+        while (n.length() > 1) {
+            superD = compute(n);
+            n = superD.toString();
+        }
+        return superD.intValue();
+    }
+
+    private static Integer compute(String n) {
+        Integer sum = 0;
+        while (n.length() > 1) {
+            sum = 0;
+            for (Character character : n.toCharArray()) {
+                sum += Integer.parseInt(character.toString());
+            }
+            n = sum.toString();
+        }
+        return sum;
+    }
+
+     */
 }

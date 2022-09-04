@@ -1,8 +1,6 @@
 package HashMap;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class CountTriplets {
 
@@ -13,7 +11,7 @@ public class CountTriplets {
 //    There are [1,4,16] and [4,16,64] at indices (0,1,2) and (1,2,3). Return 2.
 
     public static void main(String[] args) {
-        int[] a = {1,4,16,64};
+        int[] a = {1, 4, 16, 64};
         List<Long> arr = new ArrayList<>();
         for (int i : a) {
             arr.add((long) i);
@@ -25,26 +23,36 @@ public class CountTriplets {
     }
 
     static long countTriplets(List<Long> arr, long r) {
-        long count = 0;
-        long i = 0;
-        long j = 0;
-        long k = 0;
+        Map<Long, Integer> rightMap = new HashMap<>();
+        Map<Long, Integer> leftMap = new HashMap<>();
+        long numberOfGeometricPairs = 0;
 
-        // #1 Create a hashmap and count the quantities of each element in the list.
-        HashMap<Long,Integer> countMap = new HashMap<>();
-        for(Long l : arr) {
-            if(countMap.containsKey(l)) {
-                countMap.put(l, countMap.get(l) + 1);
-            }
-            else {
-                countMap.put(l, 1);
-            }
+        // populate rightMap
+        for(Long num : arr) {
+            rightMap.merge(num, 1, Integer::sum);
         }
 
-        // #2
+        for (long val : arr) {
+            long countLeft = 0;
+            long countRight = 0;
+            long lhs = 0;
+            long rhs = val * r;
+            if (val % r == 0) {
+                lhs = val / r;
+            }
+            Integer occurence = rightMap.get(val);
+            rightMap.put(val, occurence - 1);
 
+            if (rightMap.containsKey(rhs)) {
+                countRight = rightMap.get(rhs);
+            }
+            if (leftMap.containsKey(lhs)) {
+                countLeft = leftMap.get(lhs);
+            }
+            numberOfGeometricPairs += countLeft * countRight;
 
-        return count;
+            leftMap.merge(val, 1, Integer::sum);
+        }
+        return numberOfGeometricPairs;
     }
-
 }

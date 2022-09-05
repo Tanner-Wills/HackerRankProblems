@@ -14,7 +14,8 @@ public class RemoveLinkedListElements {
         ListNode sentinel = new ListNode(0);
         sentinel.next = head;
 
-        ListNode prev = sentinel, curr = head;
+        ListNode prev = sentinel;
+        ListNode curr = head;
         while (curr != null) {
             if (curr.val == val) {
                 prev.next = curr.next;

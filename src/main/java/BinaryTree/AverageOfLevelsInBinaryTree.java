@@ -59,7 +59,7 @@ public class AverageOfLevelsInBinaryTree {
         }
 
         // recursively loop for left and right nodes
-        // update "i" to track the level / index position of the ArrayLists
+        // increment "i" to track the level / index position of the ArrayLists
         average(t.left, i + 1, sum, count);
         average(t.right, i + 1, sum, count);
     }

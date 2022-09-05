@@ -22,5 +22,4 @@ public class MiddleOfLinkedList {
         int middle = (nodes.size())/2;
         return nodes.get(middle);
     }
-
 }

@@ -5,7 +5,7 @@ public class CountingIslands {
     // a "1" is passed in as a root node.
     // traverse in each direction until either out of bounds or a 0 is hit. return
     // if a 1 is found, mark it as a zero.
-    void dfs(char[][] grid, int r, int c) {
+    private void dfs(char[][] grid, int r, int c) {
         int nr = grid.length;
         int nc = grid[0].length;
 

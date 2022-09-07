@@ -12,7 +12,7 @@ public class CountDecreasingRatings {
     result = 1;
     */
     public static void main(String[] args) {
-        int[] ratings = {4,3,5,4,3,5};
+        int[] ratings = {4,3,10,4,3};
         // 5,4,3,2
         // 5,4,3
         // 5,4
